@@ -29,12 +29,10 @@ export default function PlaneItem({
             <p>Прізвисько: {nameNickname}</p>
             <p>Країна виробник: {infoCountry}</p>
             <p>Рік випуску: {infoYear}</p>
-            {/* <p>Актуальність: { }</p> */}
+            <p>Актуальність: {infoYear < 2000 ? "минуле століття" : "сучасний"}</p>
             <p>Ціна: {infoPrice}</p>
             <p>Опис: {infoDescription}</p>
             <p>Рекламна модель:</p>
-            {/* <p>Актуальність: { }</p> */}
-            {/* <p>Актуальність: { }</p> */}
             <img src={urlPromotional} alt={nameBrief} width="300" onError={(e) => onErrorImg(e)} />
             <p></p>
             <img src={urlActual} alt={nameBrief} width="600" />
@@ -43,3 +41,6 @@ export default function PlaneItem({
         </>
     )
 };
+
+// { infoYear < 2000 ? "минуле століття" : "сучасний" }
+// infoYear >= 2000
